@@ -1,0 +1,69 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+description: "Clean, modular Python with SOLID and best practices"
+# Applicable globally (leave empty or specify globs):
+globs: ["**/*.py"]
+alwaysApply: true
+---
+
+# 🧼 Clean Code & Python Best Practices
+- Enforce PEP8 formatting and naming (snake_case for functions/classes).
+- Favor list/dict comprehensions and `with` for resource management.
+- Avoid magic values—use constants or configuration.
+- Use EAFP over LBYL; simplify control flow with early returns.
+
+# 🔄 SOLID Principles
+
+## S – Single Responsibility
+- Each file handles a single cohesive module.
+- Each class represents one domain concept.
+- Single-purpose methods doing exactly one task.
+
+## O – Open/Closed
+- Prefer extension over modification; use abstract base classes or composition.
+- E.g., define `PaymentProcessor` interface and add new types via subclasses.
+
+## L – Liskov Substitution
+- Subclasses must honor base-class contracts.
+- Do not change method signatures or raise unexpected exceptions.
+
+## I – Interface Segregation
+- Split interfaces so clients use only what they need.
+- Avoid large, catch-all base classes.
+
+## D – Dependency Inversion
+- High-level modules depend on abstractions, not concrete details.
+- Use constructor injection for dependencies.
+
+# 🧱 Architectural Modularity
+
+## File-Level
+- One class (and its helpers) per `.py` file.
+- Use `__init__.py` to expose clean public API.
+
+## Class-Level
+- Use descriptive names: `Invoice`, `UserService`, etc.
+- Limit class size; extract collaborators when necessary.
+
+## Method-Level
+- Name methods with verbs (`send_email`, `process_payment`).
+- Keep methods <20 lines; low number of params.
+- Avoid side effects; document any that exist.
+
+# 🧠 Recommended OOD Patterns
+- **Strategy** for interchangeable behaviors.
+- **Factory** for creating objects flexibly.
+- **Adapter/Decorator** to wrap or extend behavior.
+- **Composite** for hierarchical structures.
+
+# 🔍 Readability & Testability
+- Add docstrings to public classes/methods.
+- Use type hints for clarity.
+- Keep functions pure when possible.
+- Make classes easy to mock – use dependency injection.
+
+
